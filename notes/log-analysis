@@ -1,0 +1,5 @@
+# Failed logon analysis
+Multiple failed logon attempts were generated on the system to observe how authentication failures are recorded in Windows security logs.
+## Observations
+The failed logon attempts were recorded at Event ID 4625. Each event included details such as the account name, logon type and failure reason which are useful for identifying pontential brute-force behavior.
+One thing that stood out was how quickly these events appeared which helped me understand why simple log counting alone can lead to false positives.
