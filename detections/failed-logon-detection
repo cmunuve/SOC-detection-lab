@@ -1,0 +1,10 @@
+# Failed Logon Detection Logic
+This detection focuses on identifying repeated failed authentication attempts that may indicate brute-force or credential-guessing activity.
+## Detection criteria
+-Event ID: 4625 (failed logon)
+-Multiple occurrences within a short time window
+-Same source system or account targeted repeatedly 
+### Detection logic(conceptual)
+If a single account or source generates more than a defined number of failed logon events within a short period of time, raise an alert for further investigation.
+#### Notes
+While simple this logic helped highlight how quickly failed logon events can accumulate and why thresholds matter in detection.
