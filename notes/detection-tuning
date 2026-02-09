@@ -1,0 +1,16 @@
+# Detection tuning and limitations
+  The failed logon detection implementation in this lab provides a useful starting point for identifying suspicious authentication activity. Writing this detection made it clear how quickly false positives could appear if thresholds are not carefully chosen.
+## Potential false positives 
+-Users mistyping passwords multiple times
+-Service accounts with expired credentials
+-Automated scripts or scheduled tasks 
+### Tuning considerations
+  To reduce noise, this detection could be tuned by:
+  -Applying thresholds based on time windows
+  -Excluding known service accounts
+  -Correlating failed logon with successful authentication events
+  #### Response considerations
+  If this detection triggered an alert, a SOC analyst would:
+  -Review the affected account and source system
+  -Check for successful logons following failures
+  -Escalate or contain if suspicious behavior persists
