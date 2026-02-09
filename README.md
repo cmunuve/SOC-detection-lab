@@ -6,3 +6,10 @@ This lab focuses on simulating and detecting suspicious authentication-related a
 -Multiple failed logon attempts within a short time window
 -Suspicious Powershell execution 
 -Basic post-detection response consideration
+## Project structure
+-'notes/'-environment setup, log analysis, tuning and response considerations
+-'detections/'-detection logic and concepts
+-'screenshots/'-evidence from simulated activity
+## What i learned
+This lab helped me understand how common authentication-related attacks appear in Windows security logs and how quickly failed logon events can accumulate. It also highlighted the importance of tuning detections to balance visibility and noise.
+Working through the detection logic and response considerations reinforced how SOC analysts rely on context, thresholds and correlation rather than single events when making decisions.
